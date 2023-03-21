@@ -1,4 +1,3 @@
-<?php?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +12,7 @@
 
   <form action="./censura.php" method="GET">
     <input require type="text" name="parola" placeholder="Scrivi una parola da censurare">
-    <textarea required name="paragrafo" cols="30" rows="10" placeholder="Incolla il testo da censurare"></textarea>
+    <textarea required name="paragrafo" cols="10" rows="5" placeholder="Incolla il testo da censurare"></textarea>
     <input type="submit" value="Invia">
   </form>
 

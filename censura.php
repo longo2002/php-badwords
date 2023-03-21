@@ -3,17 +3,14 @@
 
 $data = $_GET;
 
-var_dump($data);
-
 
 $paragrafo = isset($_GET['paragrafo']) ? $_GET['paragrafo'] : '';;
 $parola = $_GET['parola'] ?? '';
 
 $paragrafo_censurato = str_replace($parola, '***', $paragrafo);
 
-var_dump($paragrafo);
-var_dump($parola);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,13 +31,13 @@ var_dump($parola);
         <?php echo $paragrafo; ?>
       </p>
       <p>
-        Il paragrafo originale è lungo: <strong> <?php echo strlen($paragrafo); ?></strong>.
+        Il paragrafo originale è di: <strong> <?php echo strlen($paragrafo); ?></strong> parole!
       </p>
     </div>
   <?php
   } else {
 
-    echo 'Nessun paragrafo da censurare';
+    echo 'Niente censura';
   }
 
 
@@ -52,13 +49,13 @@ var_dump($parola);
         <?php echo $paragrafo_censurato; ?>
       </p>
       <p>
-        <strong> <?php echo 'Il paragrafo censurato è lungo: ' . strlen($paragrafo_censurato); ?></strong>.
+        <strong> <?php echo 'Il paragrafo censurato è di: ' . strlen($paragrafo_censurato) . ' parole!' ?></strong> 
       </p>
     </div>
   <?php
   } else {
   ?>
-    <p>Nessana parola da censurare.</p>
+    <p>Niente censura.</p>
   <?php
   }
 
